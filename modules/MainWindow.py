@@ -5,9 +5,9 @@ drawing the main text, windows, and managing the on-click events to be
 handled by the user.
 """
 
+from . import Config
 from . import Dependency
 import wx
-
 
 class MainWindow(wx.Frame):
     """

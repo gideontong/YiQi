@@ -1,3 +1,9 @@
+"""
+Checks and manages for dependencies of YiQi in terms of the Python
+program to include packages and package repositories that are
+needed for YiQi to successfully run.
+"""
+
 import json
 import sys
 
