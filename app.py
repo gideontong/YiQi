@@ -1,7 +1,9 @@
 from modules import *
+import wx
 
 def main():
-    print("The main function is running!")
-    dependency.versionCheck()
+    Dependency.versionCheck()
+    MainWindow.main()
+    print("The main function is running!")  
 
 main()

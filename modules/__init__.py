@@ -1,1 +1,2 @@
-from . import dependency
+from . import Dependency
+from . import MainWindow
