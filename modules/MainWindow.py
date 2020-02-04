@@ -8,6 +8,7 @@ handled by the user.
 from . import Dependency
 import wx
 
+
 class MainWindow(wx.Frame):
     """
     Manages the drawing of the main window of MainWindow for YiQi.
@@ -43,8 +44,8 @@ class MainWindow(wx.Frame):
 
         # Create a File menu
         fileMenu = wx.Menu()
-        helloItem = fileMenu.Append(-1, "&Hello...\tCtrl-H",
-                                    "Help string shown in status bar for this menu item")
+        optionsItem = fileMenu.Append(0, "&Options...\tCtrl-S",
+                                      "Opens the YiQi settings")
         fileMenu.AppendSeparator()
         exitItem = fileMenu.Append(wx.ID_EXIT)
 
@@ -59,19 +60,20 @@ class MainWindow(wx.Frame):
         self.SetMenuBar(menuBar)
 
         # Bing help functions to menu actions
-        self.Bind(wx.EVT_MENU, self.OnHello, helloItem)
-        self.Bind(wx.EVT_MENU, self.OnExit,  exitItem)
-        self.Bind(wx.EVT_MENU, self.OnAbout, aboutItem)
+        self.Bind(wx.EVT_MENU, self.OnOptions, optionsItem)
+        self.Bind(wx.EVT_MENU, self.OnExit,    exitItem)
+        self.Bind(wx.EVT_MENU, self.OnAbout,   aboutItem)
 
     def OnExit(self, event):
         """Close the frame, terminating the application."""
         self.Close(True)
 
-    def OnHello(self, event):
+    def OnOptions(self, event):
         """
-        Say hello to the user.
+        Give the user options so they can customize the application to
+        do tasks that have been assigned to them, like logging in.
         """
-        wx.MessageBox("Hello again from wxPython")
+        wx.MessageBox("Options Menu")
 
     def OnAbout(self, event):
         """
