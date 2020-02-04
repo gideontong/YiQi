@@ -45,6 +45,3 @@ def main():
     entire class to ensure that the data is clear and usable.
     """
     init()
-    exit()
-
-main()
