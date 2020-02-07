@@ -84,8 +84,8 @@ class MainWindow(wx.Frame):
         wx.MessageBox(
             """
             Welcome to YiQi!
-            Version: 
-            """ + Dependency.getVersion(),
+            Version: {}
+            """.format(Dependency.getVersion()),
             "About YiQi",
             wx.OK | wx.ICON_INFORMATION)
 
