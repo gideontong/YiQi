@@ -1,4 +1,7 @@
 {
     "version": "1.0-alpha",
-    "MIN_PYTHON": [3, 0]
+    "MIN_PYTHON": [3, 0],
+    "sites": {
+        "slack": "https://www.slack.com"
+    }
 }

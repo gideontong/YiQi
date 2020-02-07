@@ -7,22 +7,20 @@ needed for YiQi to successfully run.
 import json
 import sys
 
-minPy = (0, 0)
-ver = ""
+config = {}
 
 def getVersion():
-    return ver
+    return config['version']
 
 def versionCheck():
+    minVersion = config['MIN_PYTHON']
+    minPy = tuple(minVersion) # Set the minimum Python version
     if sys.version_info < minPy:
         sys.exit("Python %s.%s or later is required!\n" % minPy)
 
 def main():
-    global minPy, ver
+    global config
     with open('config/app.json') as configFile:
         config = json.load(configFile)
-        minVersion = config['MIN_PYTHON']
-        minPy = tuple(minVersion) # Set the minimum Python version
-        ver = config['version']
 
 main()
